@@ -22,7 +22,7 @@ body{
 
 header{
     height: 100vh;
-    background-image: linear-gradient(to top, rgb(161, 140, 209, 0.5) 0%, rgba(247, 224, 240, 0.5) 100%),url(../img/img1.jpg);
+    background-image: linear-gradient(to top, rgba(172, 153, 216, 0.5) 0%, rgba(247, 224, 240, 0.5) 100%),url(../img/img1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ header{
 .head{
     text-align: center;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +42,7 @@ header{
 
 .hamburguer{
     position: fixed;
+    z-index: 10;
     top: 15px;
     right: 30px;
     width: 35px;
@@ -55,7 +56,7 @@ header{
     right: 0;
     width: 30vw;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(122, 84, 212, 0.5) 0%, rgba(255, 143, 221, 0.5) 100%);
+    background-image: linear-gradient(to top, rgba(106, 78, 170) 0%, rgba(131, 65, 110) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -67,6 +68,10 @@ header{
 .menu-navegacion a{
     color: #ffff;
     text-decoration: none;
+}
+
+.spread{
+    transform: translate(0);
 }
 
 .titulo{
@@ -147,6 +152,40 @@ header{
     display: block;
     margin-bottom: 15px;
     box-shadow: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.imagen-light{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    width: 40px;
     cursor: pointer;
 }
 
@@ -295,9 +334,36 @@ footer {
 }
 
 @media screen and (max-width:468px){
+    
+    .menu-navegacion{
+        width: 65vh;
+    }
+
+    .agregar-imagen{
+        width: 95%;
+    }
+    
     img.img-galeria{
         width: 90%;
     }
 
-    
+    .titulo{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .social-media{
+        width: 100%;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        width: 95%;
+    }
 }
