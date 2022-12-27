@@ -30,6 +30,7 @@ header{
 }
 
 .head{
+    text-align: center;
     padding: 0;
     height: 100%;
     display: flex;
@@ -200,6 +201,73 @@ footer {
 
 .brand {
     font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p {
+    font-weight: 500;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.social-media-icon:hover{
+    background-color: #ffffff;
+    color: #9f8ad0;
+}
+
+.social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #ffffff;
+    margin-bottom: 60px;
 }
 /*!!!!!!!!!!  END FOOTER !!!!!!!!!!*/
 
+
+/*? ****** RESPONSIVE DESIGN ******/
+
+@media screen and (max-width:800px){
+    .menu-navegacion{
+        width: 50%;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .contenedor-servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+    
+    }
+
+    .checklist-servicio{
+        max-width: 60%;
+    }
+
+    .service{
+        margin-bottom: 30px;
+    }
+}
