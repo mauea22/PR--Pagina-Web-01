@@ -163,7 +163,6 @@ header{
 }
 
 .cont-experts { 
-    
     text-align: center;
     margin-bottom: 20px;
 }
@@ -270,4 +269,35 @@ footer {
     .service{
         margin-bottom: 30px;
     }
+
+    img.img-galeria {
+        width: 45%;
+    }
+
+    .cont-experts img{
+        width: 80%;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .contact-us {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:468px){
+    img.img-galeria{
+        width: 90%;
+    }
+
+    
 }
