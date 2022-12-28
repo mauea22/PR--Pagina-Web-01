@@ -14,7 +14,15 @@ imagenes.forEach( imagen => {
     })
 })
 
+contenedorLight.addEventListener('click', e => {
+    if (e.target !== imagenesLight) {
+        contenedorLight.classList.toggle('show');
+        imagenesLight.classList.toggle('showImage')
+    }
+})
 
 const aparecerImagen = (imagen)=>{
     imagenesLight.src = imagen;
+    contenedorLight.classList.toggle('show');
+    imagenesLight.classList.toggle('showImage')
 }

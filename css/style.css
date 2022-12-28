@@ -155,16 +155,8 @@ header{
     cursor: pointer;
 }
 
-.agregar-imagen{
-    object-fit: cover;
-    width: 60%;
-    border-radius: 10px;
-    transform: scale(0);
-    transition: transform .3s .2s;
-}
-
 .imagen-light{
-    position: absolute;
+    position: fixed;
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
@@ -177,13 +169,26 @@ header{
     transition: transform .2s ease-in-out;
 }
 
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 70%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
 .showImage{
     transform: scale(1);
 }
 
 .close{
     position: absolute;
-    top: 15px;
+    background-color: #ffffff;
+    top: 50px;
     right: 40px;
     width: 40px;
     cursor: pointer;
@@ -336,7 +341,8 @@ footer {
 @media screen and (max-width:468px){
     
     .menu-navegacion{
-        width: 65vh;
+        width: 51vh;
+        text-align: center;
     }
 
     .agregar-imagen{
